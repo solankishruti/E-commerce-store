@@ -21,12 +21,21 @@ The Shopping Cart App is a full-stack web application built using Node.js, Expre
 - JWT (JSON Web Tokens) for authentication
 - Supertest (for testing)
 
-server folder contails the node app: command to run->  npm run start it runs on 8080 port
-client folder contains the client app: command to run->  npm run dev it runs on 3000 port
+## Setup Instructions
 
-To run node test cases: command-> npx jest
+Run "npm i" on both client and server folders
 
-Usage
+server: 
+This folder contails the node applicatoin
+command to run the app is npm run start it runs on 8080 port
+
+client:
+This folder contains the client app
+command to run the app is npm run dev it runs on 3000 port
+
+To run node test cases of backend App please run the command-> npx jest
+
+## Usage
 
 Once the application is running, users can:
 
@@ -37,15 +46,15 @@ Update the quantity of items in the cart.
 Remove items from the cart.
 
 
-Additional: 
+## Additional: 
 
-I have added reducx files in both formate one is slice and other is inside reducer directly
+I have added redux files in both formate one is slice and other is inside reducer directly inside store folder
 
 Created an extra get cart details as per user API that gives the list of cart items for the user
 
 Added postman collectoin JSON file in server folder ecommerce app.postman_collection.json
 
-Credenatils: 
+## Credenatils: 
 
 - Atlas user credentails: TestUser/ uD*ugPf!88SSgg#
 
