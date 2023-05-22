@@ -57,6 +57,7 @@ Added postman collectoin JSON file in server folder ecommerce app.postman_collec
 ## Credenatils: 
 
 - Atlas user credentails: TestUser/ uD*ugPf!88SSgg#
+
 Note: Validity of the above mentioned user is for a week.
 
 - Creadentails to log in the web App : shrutisolanki / shrutisolanki
