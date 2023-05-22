@@ -1,0 +1,343 @@
+{
+	"info": {
+		"_postman_id": "cd3ab08a-90fe-411e-90d7-d664e2be32a2",
+		"name": "ecommerce app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20808117"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"shruti.solanki@rlogical.com\", \n    \"username\": \"shrutisolanki\",\n    \"password\": \"shrutisolanki\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjQ4ZTU2ZGM2OTlhODFiMTBmNTdlMSIsImlhdCI6MTY4NDcwNTY1NSwiZXhwIjoxNjg0NzkyMDU1fQ.CRxGBvZWnKZAwRiJjwSXulBRbyWhUJ8Qj9M4B2KQkiE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"shruti.solanki@rlogical.com\", \n    \"username\": \"shrutisolnki\",\n    \"password\": \"shrutisolnki\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/test/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"test",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"shrutisolanki\",\n    \"password\": \"shrutisolanki\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/auth/signin",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjQ4ZTU2ZGM2OTlhODFiMTBmNTdlMSIsImlhdCI6MTY4NDMxMTY1MiwiZXhwIjoxNjg0Mzk4MDUyfQ.wuP3VglttXLRmzIuYDx-WzTqK2et3AbP78ibRaw19QU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add products",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjQ4ZTU2ZGM2OTlhODFiMTBmNTdlMSIsImlhdCI6MTY4NDMxMTY1MiwiZXhwIjoxNjg0Mzk4MDUyfQ.wuP3VglttXLRmzIuYDx-WzTqK2et3AbP78ibRaw19QU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"product\",\n    \"price\": 20,\n    \"image\": \"https://via.placeholder.com/150\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add to cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjQ4ZTU2ZGM2OTlhODFiMTBmNTdlMSIsImlhdCI6MTY4NDczNTY1NywiZXhwIjoxNjg0ODIyMDU3fQ.xINOQrDhlEtF8KNwZZzau4hz8DeAzieIO9CbNcd6AFA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"64648e56dc699a81b10f57e1\",\n    \"productId\": \"646496f4732fe7b3c0329dd2\",\n    \"quantity\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/cart",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get cart details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NmIzMDQ0NjcxMmIyODhmODdmYmQ3NiIsImlhdCI6MTY4NDc1NTM2MCwiZXhwIjoxNjg0ODQxNzYwfQ.78ravrLK2PHNvAcw2q7J-eBqKkJsSL-o8mtxWWBR3nY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/cart/646496f4732fe7b3c0329dd2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cart",
+						"646496f4732fe7b3c0329dd2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update cart details",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjQ4ZTU2ZGM2OTlhODFiMTBmNTdlMSIsImlhdCI6MTY4NDMxMTY1MiwiZXhwIjoxNjg0Mzk4MDUyfQ.wuP3VglttXLRmzIuYDx-WzTqK2et3AbP78ibRaw19QU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"64648e56dc699a81b10f57e1\",\n    \"quantity\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/cart/646499ec1c803bb938fb9bce",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cart",
+						"646499ec1c803bb938fb9bce"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete from cart",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NjQ4ZTU2ZGM2OTlhODFiMTBmNTdlMSIsImlhdCI6MTY4NDMxMTY1MiwiZXhwIjoxNjg0Mzk4MDUyfQ.wuP3VglttXLRmzIuYDx-WzTqK2et3AbP78ibRaw19QU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"64648e56dc699a81b10f57e1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/cart/646496f4732fe7b3c0329dd2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cart",
+						"646496f4732fe7b3c0329dd2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
